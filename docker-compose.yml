@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  configservice:
+    image: aangdocker/config-server:0.0.1-SNAPSHOT
+    ports:
+      - "8071:8071"
+
+    networks:
+      - config-server-network
+
+networks:
+  config-server-network:
+    driver: bridge
